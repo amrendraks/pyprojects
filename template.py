@@ -1,13 +1,14 @@
 from string import Template
+
 def Main():
     data = []
-    data.append(dict(name="example1", phone=11111111111))
-    data.append(dict(name="example2", phone=22222222222))
+    data.append(dict(item = "coke", qty = 2, price = 10))
+    data.append(dict(item = "chew", qty = 5, price = 5))
 
-    temp = Template("My name is $name and phone number is $phone")
+    temp = Template("Total price of $item = $qty x $price")
 
-    for row in data:
-        print(temp.substitute(row))
+    for tlist in data:
+        print temp.substitute(tlist)
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     Main()
